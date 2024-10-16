@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Responsive Portfolio</title>
+    <!-- Adding fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply the background color and texture for the entire body */
+        body {
+            background-color: #0d1b2a; /* Dark blue background */
+            background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png'); /* Subtle texture */
+            color: #ffffff; /* White text for contrast */
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+        }
+
+        /* Styling the header navigation */
+        .nav-bar {
+            background-color: #0d1b2a; /* Matching background color */
+            padding: 20px;
+            text-align: center;
+            position: fixed; /* Fixed position for consistency */
+            width: 100%; /* Full width */
+            top: 0; /* Stick to the top */
+            left: 0; /* Stick to the left */
+            z-index: 1000; /* Ensure it's above other content */
+        }
+
+        /* Styling the navigation links */
+        .nav-links {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            display: inline-block; /* Display links in a horizontal line */
+            margin-right: 20px; /* Add spacing between links */
+        }
+
+        .nav-links li a {
+            color: #ffffff; /* White text for the navigation links */
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links li a:hover {
+            color: #c63c0e; /* Lighter red for hover effect */
+        }
+
+        /* Skills section styling */
+        .skills-section {
+            padding: 50px 20px;
+            margin-top: 80px; /* Adjusted top margin to move the section up */
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .skills-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #c63c0e; /* Lighter red for highlighting */
+            margin-bottom: 20px;
+        }
+
+        .skills-section ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+        }
+
+        .skills-section li {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            transition: transform 0.3s, z-index 0.3s; /* Smooth transition for the effect */
+            padding: 10px; /* Added padding to help with spacing */
+        }
+
+        .skills-section li:hover {
+            transform: translateY(-20px) scale(1.1); /* Move up more and scale up the item */
+            z-index: 10; /* Bring the item to the front */
+        }
+
+        /* Resume download button styling */
+        .download-button {
+            background-color: #c63c0e; /* Button background color */
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s;
+            margin: 30px 0; /* Margin to space it from other content */
+        }
+
+        .download-button:hover {
+            background-color: #a33c0a; /* Darker shade for hover effect */
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .skills-section h2 {
+                font-size: 2rem;
+            }
+
+            .download-button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .download-button {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="index.html">Intro</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="skills-section">
+        <h2>My Skills</h2>
+        <ul>
+            <li>Cloud Computing</li>
+            <li>Web Development</li>
+            <li>Programming Languages: C, Python, HTML, CSS</li>
+            <li>Data Science</li>
+        </ul>
+    </section>
+
+    <a href="newresume02.pdf" class="download-button" download>Download Resume</a>
+
+    <script>
+        // Anti-copy functions
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey && e.key === 'c') || (e.ctrlKey && e.key === 'x') || (e.ctrlKey && e.key === 'u')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

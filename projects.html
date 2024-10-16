@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Responsive Portfolio</title>
+    <!-- Adding fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply the background color and texture for the entire body */
+        body {
+            background-color: #0d1b2a; /* Dark blue background */
+            background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png'); /* Subtle texture */
+            color: #ffffff; /* White text for contrast */
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+        }
+
+        /* Styling the header navigation */
+        .nav-bar {
+            background-color: #0d1b2a; /* Matching background color */
+            padding: 20px;
+            text-align: center;
+            position: fixed; /* Fixed position for consistency */
+            width: 100%; /* Full width */
+            top: 0; /* Stick to the top */
+            left: 0; /* Stick to the left */
+            z-index: 1000; /* Ensure it's above other content */
+        }
+
+        /* Styling the navigation links */
+        .nav-links {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            display: inline-block; /* Display links in a horizontal line */
+            margin-right: 20px; /* Add spacing between links */
+        }
+
+        .nav-links li a {
+            color: #ffffff; /* White text for the navigation links */
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links li a:hover {
+            color: #c63c0e; /* Lighter red for hover effect */
+        }
+
+        /* Projects section styling */
+        .projects-section {
+            padding: 50px 20px;
+            margin-top: 100px; /* Adjusted top margin to move the section down */
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        .projects-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #c63c0e; /* Lighter red for highlighting */
+            margin-bottom: 20px;
+        }
+
+        /* Responsive project layout using Flexbox */
+        .projects-container {
+            display: flex;
+            justify-content: space-between; /* Ensure equal spacing between boxes */
+            gap: 20px; /* Space between boxes */
+            flex-wrap: wrap; /* Allow wrap on smaller screens */
+        }
+
+        /* Project box styling */
+        .project-box {
+            background-color: #1b263b; /* Darker background for boxes */
+            border-radius: 10px;
+            padding: 20px;
+            width: calc(50% - 10px); /* Two boxes side by side with equal width */
+            height: 300px; /* Set equal height to make the boxes square */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #ffffff;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        .project-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #c63c0e; /* Lighter red for project titles */
+            margin-bottom: 10px;
+        }
+
+        .project-box p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .project-box a {
+            color: #c63c0e; /* Lighter red for links */
+            text-decoration: none;
+        }
+
+        .project-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Flexbox adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .project-box {
+                width: 100%; /* Full width for smaller screens */
+                height: auto; /* Allow dynamic height on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="index.html">Intro</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects-section">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-box">
+                <h3>Airline Reservation System</h3>
+                <p> The Airline Reservation System is a sophisticated application developed using the MERN stack, which includes MongoDB, Express.js, React.js, and Node.js. This system provides a seamless solution for managing flight bookings, user accounts, and flight information..</p>
+                <a href="project1.html">View More</a> <!-- Link to project1.html -->
+            </div>
+            <div class="project-box">
+                <h3>Event Management System</h3>
+                <p> The Event Management System is a comprehensive solution developed using JDBC and Enterprise Programming principles in Java. This system is designed to streamline the management of various events, providing a robust platform for organizing, tracking, and managing event-related data efficiently.</p>
+                <a href="project2.html">View More</a> <!-- Link to project2.html -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Anti-copy functions
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey && e.key === 'c') || (e.ctrlKey && e.key === 'x') || (e.ctrlKey && e.key === 'u')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

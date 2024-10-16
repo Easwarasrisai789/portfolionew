@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Responsive Portfolio</title>
+    <!-- Adding fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply the background color and texture for the entire body */
+        body {
+            background-color: #0d1b2a; /* Dark blue background */
+            background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png'); /* Subtle texture */
+            color: #ffffff; /* White text for contrast */
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Styling the header navigation */
+        .nav-bar {
+            background-color: #0d1b2a; /* Matching background color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Styling the navigation links */
+        .nav-links {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            display: inline-block; /* Display links in a horizontal line */
+            margin-right: 20px; /* Add spacing between links */
+        }
+
+        .nav-links li a {
+            color: #ffffff; /* White text for the navigation links */
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links li a:hover {
+            color: #c63c0e; /* Lighter red for hover effect */
+        }
+
+        /* About section styling */
+        .about-section {
+            background-color: #0d1b2a; /* Dark blue background */
+            padding: 50px 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
+            /* Removed border-radius and box-shadow */
+        }
+
+        .about-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #c63c0e; /* Lighter red for highlighting */
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .about-content a {
+            color: #c63c0e; /* Lighter red for links */
+            text-decoration: none;
+        }
+
+        .about-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Anti-copy functions */
+        ::selection {
+            background: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links li {
+                display: block; /* Stack navigation links vertically on smaller screens */
+                margin: 10px 0;
+            }
+
+            .about-content h2 {
+                font-size: 2rem; /* Adjust font size for smaller screens */
+            }
+
+            .about-content p {
+                font-size: 1rem; /* Adjust font size for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-bar {
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+
+            .about-content h2 {
+                font-size: 1.5rem; /* Further adjust font size for very small screens */
+            }
+
+            .about-content p {
+                font-size: 0.9rem; /* Further adjust font size for very small screens */
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey && e.key === 'c') || (e.ctrlKey && e.key === 'x') || (e.ctrlKey && e.key === 'u')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="index.html">Intro</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-section">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>
+                I am an enthusiastic and fast learner with a strong foundation in Computer Science and Engineering, 
+                currently pursuing a Bachelor of Technology at Koneru Lakshmaiah Education Foundation, Vijayawada, 
+                with a CGPA of 9.1. My academic journey has equipped me with robust skills in Cloud Computing, 
+                Web Development, and Programming languages such as C, Python, HTML, and CSS.
+            </p>
+            <p>
+                Specializing in Data Science, I am passionate about analyzing complex data to derive actionable insights 
+                and contribute to data-driven decision-making. My specialization drives my commitment to leveraging 
+                data science skills to solve real-world problems and foster innovation.
+            </p>
+            <p>
+                I have gained practical experience through an AICTE Virtual Internship on AWS and hold an AWS Cloud 
+                Practitioner certification, which has deepened my understanding of cloud technologies. My education and 
+                hands-on experience have honed my communication skills and my ability to work effectively within a team 
+                environment.
+            </p>
+            <p>
+                My academic achievements include a high percentage in SSC (97.3%) and Intermediate (68.1%), reflecting 
+                my dedication and commitment to excellence. I am eager to apply my expertise in cloud computing, data 
+                science, and web development to contribute to innovative projects and solutions.
+            </p>
+            <p>
+                Feel free to connect with me on <a href="https://www.linkedin.com/in/ankamreddi-easwara-sri-sai-venkat-63090b26a/">LinkedIn</a> 
+                for professional networking and opportunities.
+            </p>
+        </div>
+    </section>
+</body>
+</html>

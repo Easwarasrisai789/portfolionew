@@ -1,0 +1,125 @@
+/* Apply the background color and texture for the entire body */
+body {
+    background-color: #0d1b2a; /* Dark blue background */
+    background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png'); /* Subtle texture */
+    color: #ffffff; /* White text for contrast */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Styling the header navigation */
+.nav-bar {
+    background-color: #0d1b2a; /* Matching background color */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Adding margin to the intro-section to create space between the navbar and the content */
+.intro-section {
+    margin-top: 20px; /* Adjust as needed for spacing */
+    padding: 100px 20px; /* Responsive padding */
+    background-color: #0d1b2a; /* Same background color */
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    text-align: left;
+}
+
+/* Styling the navigation links */
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block; /* Display links in a horizontal line */
+    margin-right: 20px; /* Add spacing between links */
+}
+
+.nav-links li a {
+    color: #ffffff; /* White text for the navigation links */
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    color: #c63c0e; /* Lighter red for hover effect */
+}
+
+/* Intro text styling */
+.intro-text {
+    text-align: left; /* Align the text to the left */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the left */
+}
+
+.intro-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInName 2s forwards; /* Fade-in animation */
+}
+
+.intro-text h2 {
+    font-size: 2rem;
+    color: #c63c0e; /* Lighter red for highlighting role */
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.skills-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c63c0e; /* Lighter red for button background */
+    color: #0d1b2a; /* Dark blue text for the button */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skills-link:hover {
+    background-color: #8d3f1a; /* Desaturated red for hover effect */
+}
+
+/* Fade-in animation for the name */
+@keyframes fadeInName {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+    .intro-section {
+        padding-left: 50px; /* Add left padding for larger screens */
+    }
+}
+/* Prevent text selection */
+body {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard syntax */
+}
+   

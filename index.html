@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio - Intro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="index.html">Intro</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="intro" class="intro-section">
+        <div class="intro-content">
+            <div class="intro-text">
+                <h1 class="fade-in-name">
+                    <span class="name-part part-1">ANKAMREDDI EASWARA SRI SAI VENKAT</span>
+                </h1>
+                <h2>I'm <span class="highlight">Data Science Student</span></h2>
+                <p>Pursuing B.Tech 3rd year in Computer Science Engineering.</p>
+                <a href="skills.html" class="skills-link">See my Skills</a>
+            </div>
+            <div class="intro-image">
+                
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable copy
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+            alert('Copying content is not allowed!');
+        });
+
+        // Disable text selection
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable key combinations like F12 (Inspect Element) and Ctrl+Shift+I (Developer Tools)
+        document.addEventListener('keydown', function(e) {
+            // Prevent F12
+            if (e.key === "F12") {
+                e.preventDefault();
+            }
+            // Prevent Ctrl+Shift+I
+            if (e.ctrlKey && e.shiftKey && e.key === "I") {
+                e.preventDefault();
+            }
+            // Prevent Ctrl+Shift+C (for inspect element)
+            if (e.ctrlKey && e.shiftKey && e.key === "C") {
+                e.preventDefault();
+            }
+            // Prevent Ctrl+U (View Page Source)
+            if (e.ctrlKey && e.key === "u") {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

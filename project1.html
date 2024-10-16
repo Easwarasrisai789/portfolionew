@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project One - Responsive Portfolio</title>
+    <!-- Adding fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d1b2a; /* Dark blue background */
+            background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-bar {
+            background-color: #0d1b2a;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .nav-links li a {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links li a:hover {
+            color: #c63c0e;
+        }
+
+        .project-section {
+            padding: 50px 20px;
+            margin-top: 100px;
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        .project-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #c63c0e;
+            margin-bottom: 20px;
+        }
+
+        /* Slider styling */
+        .slider {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            height: 400px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .slider img, .slider iframe {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .slider img.active, .slider iframe.active {
+            display: block;
+        }
+
+        /* Slider controls */
+        .controls {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .control-btn {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* Flexbox adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .slider {
+                width: 100%;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="index.html">Intro</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-section">
+        <h2>AIR LINE RESERVATION SYSTEM</h2>
+
+        <!-- Slider with image and video -->
+        <div class="slider">
+            <img src="project1.jpeg" class="active" alt="Project Image">
+            <iframe src="https://www.youtube.com/embed/j26p2_x44Tk" title="YouTube video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+            <div class="controls">
+                <button class="control-btn prev">❮</button>
+                <button class="control-btn next">❯</button>
+            </div>
+        </div>
+
+        <div class="project-info">
+            <p>
+                The Airline Reservation System is a sophisticated application developed using the MERN stack, which includes MongoDB, Express.js, React.js, and Node.js. This system provides a seamless solution for managing flight bookings, user accounts, and flight information.
+            </p>
+            <p>
+                <strong>Key Features:</strong>
+                <ul style="text-align: left; margin: 0 auto; display: inline-block;">
+                    <li>Flight Search: Search and filter flights based on destination, date, and other criteria.</li>
+                    <li>Booking Management: Book flights, view booking details, and manage reservations.</li>
+                    <li>User Accounts: Create and manage user profiles with authentication and authorization.</li>
+                    <li>Real-Time Updates: Receive real-time updates on flight statuses and availability.</li>
+                    <li>Admin Dashboard: An admin interface for managing flights, users, and reservations.</li>
+                </ul>
+            </p>
+            <p>
+                <strong>Technologies Used:</strong> This project leverages MongoDB for database management, Express.js and Node.js for the server-side logic, and React.js for the client-side interface. The MERN stack provides a full-stack JavaScript environment, enabling a seamless development process and efficient handling of user interactions and data.
+            </p>
+            <p>
+                <strong>Benefits:</strong> The system enhances the user experience by providing an intuitive interface for booking and managing flights. It simplifies the reservation process and offers comprehensive tools for both users and administrators to interact with the system efficiently.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Anti-copy and inspect prevention
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey && e.key === 'c') || (e.ctrlKey && e.key === 'x') || (e.ctrlKey && e.key === 'u')) {
+                e.preventDefault();
+            }
+            // Disable F12 (DevTools) and Ctrl+Shift+I (Inspect)
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+            }
+        });
+
+        // Slider functionality
+        const slides = document.querySelectorAll('.slider img, .slider iframe');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        prevBtn.addEventListener('click', function() {
+            showSlide(currentSlide - 1);
+        });
+
+        nextBtn.addEventListener('click', function() {
+            showSlide(currentSlide + 1);
+        });
+    </script>
+</body>
+</html>
